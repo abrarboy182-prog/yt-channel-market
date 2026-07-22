@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YT Channel Market | Buy & Sell YouTube Channels</title>
+
+<meta name="description" content="YT Channel Market - Buy and sell YouTube channels. Submit your channel for review and find YouTube channels for sale.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f6f9;
+    color:#111827;
+}
+
+/* HEADER */
+
+header{
+    background:#111827;
+    color:white;
+    padding:16px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#111827,#1d4ed8);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:650px;
+    margin:0 auto 30px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    margin:5px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+}
+
+.buy-btn{
+    background:#16a34a;
+    color:white;
+}
+
+.sell-btn{
+    background:#f59e0b;
+    color:white;
+}
+
+/* SECTION */
+
+section{
+    padding:55px 5%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:30px;
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:1000px;
+    margin:0 auto 35px;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:12px;
+}
+
+.search-box input,
+.search-box select{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:9px;
+    background:white;
+    font-size:15px;
+}
+
+/* CHANNEL CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.channel-image{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+    background:#e5e7eb;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:21px;
+    margin-bottom:12px;
+}
+
+.info{
+    color:#4b5563;
+    margin:8px 0;
+}
+
+.price{
+    font-size:23px;
+    font-weight:bold;
+    margin:18px 0;
+}
+
+.contact-btn{
+    display:block;
+    background:#25D366;
+    color:white;
+    text-align:center;
+    padding:14px;
+    border-radius:9px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* SELL FORM */
+
+.form-container{
+    max-width:700px;
+    margin:auto;
+}
+
+.form-box{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.form-box label{
+    display:block;
+    margin:15px 0 7px;
+    font-weight:bold;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:9px;
+    font-size:15px;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:22px;
+    padding:15px;
+    border:none;
+    border-radius:9px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.notice{
+    max-width:700px;
+    margin:0 auto 25px;
+    background:#fff7ed;
+    border-left:5px solid #f59e0b;
+    padding:16px;
+    border-radius:8px;
+    line-height:1.6;
+}
+
+/* ABOUT */
+
+.about{
+    background:white;
+    text-align:center;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    color:#4b5563;
+    line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+footer p{
+    margin:8px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav{
+        gap:12px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .search-box{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:26px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+📺 YT Channel Market
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#buy">Buy</a>
+<a href="#sell">Sell</a>
+</nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<h1>Buy & Sell YouTube Channels</h1>
+
+<p>
+Find YouTube channels available for sale or submit your own channel for review.
+All channel listings are reviewed by the YT Channel Market admin before being published.
+</p>
+
+<a href="#buy" class="btn buy-btn">
+🛒 Buy a Channel
+</a>
+
+<a href="#sell" class="btn sell-btn">
+💰 Sell Your Channel
+</a>
+
+</section>
+
+
+<!-- BUY CHANNELS -->
+
+<section id="buy">
+
+<h2 class="section-title">
+🔥 YouTube Channels For Sale
+</h2>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Search channel..."
+onkeyup="filterChannels()"
+>
+
+<select id="categoryFilter" onchange="filterChannels()">
+
+<option value="all">All Categories</option>
+<option value="Gaming">Gaming</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Movie">Movie</option>
+<option value="Magic">Magic</option>
+<option value="Education">Education</option>
+<option value="Other">Other</option>
+
+</select>
+
+<select id="monetizationFilter" onchange="filterChannels()">
+
+<option value="all">All Channels</option>
+<option value="Monetized">Monetized</option>
+<option value="Non-Monetized">Non-Monetized</option>
+
+</select>
+
+</div>
+
+
+<div class="cards" id="channelList">
+
+
+<!-- DEMO CHANNEL 1 -->
+
+<div class="card channel-card"
+data-name="Example Gaming Channel"
+data-category="Gaming"
+data-monetization="Non-Monetized">
+
+<img
+class="channel-image"
+src="https://via.placeholder.com/600x350?text=YouTube+Channel"
+alt="YouTube Channel"
+>
+
+<h3>Example Gaming Channel</h3>
+
+<p class="info">
+👥 Subscribers: 2K+
+</p>
+
+<p class="info">
+🎮 Category: Gaming
+</p>
+
+<p class="info">
+💰 Monetization: Non-Monetized
+</p>
+
+<p class="info">
+📸 Proof: Available
+</p>
+
+<p class="price">
+💵 Price: ₹2,000
+</p>
+
+<a
+class="contact-btn"
+href="https://wa.me/918263986517?text=Hello%2C%20I%20want%20to%20buy%20the%20Example%20Gaming%20Channel%20listed%20on%20YT%20Channel%20Market."
+target="_blank">
+
+📱 Contact Admin on WhatsApp
+
+</a>
+
+</div>
+
+
+<!-- DEMO CHANNEL 2 -->
+
+<div class="card channel-card"
+data-name="Example Entertainment Channel"
+data-category="Entertainment"
+data-monetization="Monetized">
+
+<img
+class="channel-image"
+src="https://via.placeholder.com/600x350?text=YouTube+Channel"
+alt="YouTube Channel"
+>
+
+<h3>Example Entertainment Channel</h3>
+
+<p class="info">
+👥 Subscribers: 5K+
+</p>
+
+<p class="info">
+🎭 Category: Entertainment
+</p>
+
+<p class="info">
+💰 Monetization: Monetized
+</p>
+
+<p class="info">
+📸 Proof: Available
+</p>
+
+<p class="price">
+💵 Price: ₹8,000
+</p>
+
+<a
+class="contact-btn"
+href="https://wa.me/918263986517?text=Hello%2C%20I%20want%20to%20buy%20the%20Example%20Entertainment%20Channel%20listed%20on%20YT%20Channel%20Market."
+target="_blank">
+
+📱 Contact Admin on WhatsApp
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- SELL CHANNEL -->
+
+<section id="sell">
+
+<h2 class="section-title">
+💰 Sell Your YouTube Channel
+</h2>
+
+<div class="notice">
+
+<strong>How it works:</strong><br>
+
+Fill in your channel details below and submit your request.
+Your request will be sent directly to the YT Channel Market admin on WhatsApp.
+After verification, the admin will decide whether to publish your channel on the website.
+
+</div>
+
+
+<div class="form-container">
+
+<div class="form-box">
+
+
+<label>
+Channel Name *
+</label>
+
+<input
+type="text"
+id="channelName"
+placeholder="Enter your YouTube channel name"
+>
+
+
+<label>
+YouTube Channel Link *
+</label>
+
+<input
+type="url"
+id="channelLink"
+placeholder="https://youtube.com/@yourchannel"
+>
+
+
+<label>
+Channel Photo / Logo Link
+</label>
+
+<input
+type="url"
+id="channelPhoto"
+placeholder="Paste your channel image link"
+>
+
+
+<label>
+Subscribers *
+</label>
+
+<input
+type="text"
+id="subscribers"
+placeholder="Example: 2K, 10K, 24K, 100K"
+>
+
+
+<label>
+Category *
+</label>
+
+<select id="category">
+
+<option>Gaming</option>
+<option>Entertainment</option>
+<option>Movie</option>
+<option>Magic</option>
+<option>Education</option>
+<option>Other</option>
+
+</select>
+
+
+<label>
+Monetization Status *
+</label>
+
+<select id="monetization">
+
+<option>Monetized</option>
+<option>Non-Monetized</option>
+
+</select>
+
+
+<label>
+Selling Price *
+</label>
+
+<input
+type="text"
+id="price"
+placeholder="Example: ₹10,000"
+>
+
+
+<label>
+Proof Screenshot Link
+</label>
+
+<input
+type="url"
+id="proof"
+placeholder="Paste proof screenshot link"
+>
+
+
+<label>
+Seller Name *
+</label>
+
+<input
+type="text"
+id="sellerName"
+placeholder="Enter your name"
+>
+
+
+<label>
+Seller WhatsApp Number *
+</label>
+
+<input
+type="tel"
+id="sellerWhatsapp"
+placeholder="Enter your WhatsApp number"
+>
+
+
+<label>
+Additional Details
+</label>
+
+<textarea
+id="details"
+rows="5"
+placeholder="Tell us anything important about your channel..."
+></textarea>
+
+
+<button
+class="submit-btn"
+onclick="sendSellerRequest()">
+
+📱 Submit Channel for Review
+
+</button>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2 class="section-title">
+About YT Channel Market
+</h2>
+
+<p>
+
+YT Channel Market is a marketplace-style platform for people interested in buying or selling YouTube channels. Sellers can submit their channel information for review, while buyers can view approved listings and contact the YT Channel Market admin directly through WhatsApp.
+
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+📺 <strong>YT Channel Market</strong>
+</p>
+
+<p>
+Buy & Sell YouTube Channels
+</p>
+
+<p>
+📱 WhatsApp: 8263986517
+</p>
+
+<p>
+© 2026 YT Channel Market. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* SELL CHANNEL → ADMIN WHATSAPP */
+
+function sendSellerRequest(){
+
+var channelName =
+document.getElementById("channelName").value.trim();
+
+var channelLink =
+document.getElementById("channelLink").value.trim();
+
+var channelPhoto =
+document.getElementById("channelPhoto").value.trim();
+
+var subscribers =
+document.getElementById("subscribers").value.trim();
+
+var category =
+document.getElementById("category").value;
+
+var monetization =
+document.getElementById("monetization").value;
+
+var price =
+document.getElementById("price").value.trim();
+
+var proof =
+document.getElementById("proof").value.trim();
+
+var sellerName =
+document.getElementById("sellerName").value.trim();
+
+var sellerWhatsapp =
+document.getElementById("sellerWhatsapp").value.trim();
+
+var details =
+document.getElementById("details").value.trim();
+
+
+if(
+channelName === "" ||
+channelLink === "" ||
+subscribers === "" ||
+price === "" ||
+sellerName === "" ||
+sellerWhatsapp === ""
+){
+
+alert("Please fill all required fields marked with *.");
+
+return;
+
+}
+
+
+var message =
+
+"📺 NEW YOUTUBE CHANNEL SELL REQUEST%0A%0A" +
+
+"━━━━━━━━━━━━━━%0A" +
+
+"📌 CHANNEL DETAILS%0A" +
+
+"━━━━━━━━━━━━━━%0A" +
+
+"Channel Name: " + channelName + "%0A" +
+
+"Channel Link: " + channelLink + "%0A" +
+
+"Channel Photo: " + channelPhoto + "%0A" +
+
+"Subscribers: " + subscribers + "%0A" +
+
+"Category: " + category + "%0A" +
+
+"Monetization: " + monetization + "%0A" +
+
+"Selling Price: " + price + "%0A" +
+
+"Proof: " + proof + "%0A%0A" +
+
+"━━━━━━━━━━━━━━%0A" +
+
+"👤 SELLER DETAILS%0A" +
+
+"━━━━━━━━━━━━━━%0A" +
+
+"Seller Name: " + sellerName + "%0A" +
+
+"Seller WhatsApp: " + sellerWhatsapp + "%0A%0A" +
+
+"Additional Details: " + details;
+
+
+var whatsappURL =
+"https://wa.me/918263986517?text=" + message;
+
+
+window.open(whatsappURL,"_blank");
+
+}
+
+
+/* SEARCH & FILTER */
+
+function filterChannels(){
+
+var search =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+var category =
+document.getElementById("categoryFilter")
+.value;
+
+var monetization =
+document.getElementById("monetizationFilter")
+.value;
+
+var cards =
+document.querySelectorAll(".channel-card");
+
+
+cards.forEach(function(card){
+
+var name =
+card.getAttribute("data-name")
+.toLowerCase();
+
+var cardCategory =
+card.getAttribute("data-category");
+
+var cardMonetization =
+card.getAttribute("data-monetization");
+
+
+var matchesSearch =
+name.includes(search);
+
+var matchesCategory =
+category === "all" ||
+cardCategory === category;
+
+var matchesMonetization =
+monetization === "all" ||
+cardMonetization === monetization;
+
+
+if(
+matchesSearch &&
+matchesCategory &&
+matchesMonetization
+){
+
+card.style.display = "block";
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+}
+
+</script>
+
+
+</body>
+</html>
