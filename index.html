@@ -41,8 +41,6 @@ min-height:100vh;
 overflow-x:hidden;
 }
 
-/* ANIMATED BACKGROUND */
-
 body:before,
 body:after{
 content:"";
@@ -74,8 +72,6 @@ animation-delay:3s;
 from{transform:translate(0,0)}
 to{transform:translate(70px,-50px)}
 }
-
-/* HEADER */
 
 header{
 position:sticky;
@@ -139,8 +135,6 @@ font-size:20px;
 cursor:pointer;
 }
 
-/* SIDE MENU */
-
 .side-menu{
 position:fixed;
 top:0;
@@ -184,8 +178,6 @@ float:right;
 font-size:28px;
 cursor:pointer;
 }
-
-/* HERO */
 
 .hero{
 padding:85px 20px 95px;
@@ -278,8 +270,6 @@ animation-delay:.5s;
 50%{transform:translateY(-5px)}
 }
 
-/* INFO BOX */
-
 .info-box{
 max-width:1050px;
 margin:0 auto 45px;
@@ -299,8 +289,6 @@ margin-bottom:10px;
 color:#cbd5e1;
 line-height:1.7;
 }
-
-/* SEARCH */
 
 .search-area{
 max-width:1250px;
@@ -338,8 +326,6 @@ border-color:#3b82f6;
 box-shadow:0 0 0 3px rgba(59,130,246,.12);
 }
 
-/* SECTION */
-
 section{
 padding:70px 5%;
 }
@@ -357,8 +343,6 @@ color:#94a3b8;
 margin-bottom:40px;
 line-height:1.7;
 }
-
-/* CATEGORY TABS */
 
 .category-tabs{
 display:flex;
@@ -383,8 +367,6 @@ font-weight:700;
 background:#16a34a;
 color:white;
 }
-
-/* CHANNEL GRID */
 
 .cards{
 max-width:1250px;
@@ -463,8 +445,6 @@ padding:45px;
 grid-column:1/-1;
 }
 
-/* TRUST FEATURES */
-
 .features{
 max-width:1150px;
 margin:auto;
@@ -496,8 +476,6 @@ line-height:1.6;
 font-size:14px;
 }
 
-/* STATS */
-
 .stats{
 max-width:1100px;
 margin:0 auto;
@@ -524,8 +502,6 @@ color:#60a5fa;
 margin-top:8px;
 color:#94a3b8;
 }
-
-/* SELL */
 
 .sell-section{
 background:linear-gradient(135deg,rgba(30,64,175,.14),rgba(76,29,149,.12));
@@ -566,8 +542,6 @@ font-size:16px;
 font-weight:800;
 cursor:pointer;
 }
-
-/* ADMIN */
 
 #adminPanel{
 display:none;
@@ -616,7 +590,14 @@ margin-top:15px;
 background:#dc2626!important;
 }
 
-/* MODAL */
+.delete:hover{
+background:#b91c1c!important;
+}
+
+.delete:disabled{
+opacity:.6;
+cursor:not-allowed;
+}
 
 .modal{
 display:none;
@@ -698,8 +679,6 @@ text-decoration:none;
 font-weight:800;
 }
 
-/* GALLERY */
-
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
@@ -715,8 +694,6 @@ border-radius:12px;
 cursor:zoom-in;
 border:1px solid rgba(255,255,255,.1);
 }
-
-/* IMAGE VIEWER */
 
 .image-viewer{
 display:none;
@@ -742,8 +719,6 @@ right:28px;
 font-size:42px;
 cursor:pointer;
 }
-
-/* FLOATING WHATSAPP */
 
 .whatsapp-float{
 position:fixed;
@@ -771,8 +746,6 @@ height:37px;
 70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}
 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
 }
-
-/* FOOTER */
 
 footer{
 padding:65px 20px 35px;
@@ -871,8 +844,6 @@ margin:0 8px;
 font-size:14px;
 }
 
-/* RESPONSIVE */
-
 @media(max-width:900px){
 
 .search-box{
@@ -940,8 +911,6 @@ font-size:28px;
 
 <body>
 
-<!-- SIDE MENU -->
-
 <div class="side-menu" id="sideMenu">
 
 <span class="menu-close" onclick="closeMenu()">×</span>
@@ -956,9 +925,6 @@ font-size:28px;
 <a href="#" onclick="openAdminLogin(event);closeMenu()">🔐 Admin</a>
 
 </div>
-
-
-<!-- HEADER -->
 
 <header>
 
@@ -987,9 +953,6 @@ YT Channel Market
 </div>
 
 </header>
-
-
-<!-- HERO -->
 
 <section class="hero" id="home">
 
@@ -1021,9 +984,6 @@ YT Channel Market is a modern marketplace designed for people looking to buy or 
 
 </section>
 
-
-<!-- INFO -->
-
 <div class="info-box">
 
 <h2>India's YouTube Channel Marketplace</h2>
@@ -1033,9 +993,6 @@ Find YouTube channels available for sale and explore important listing informati
 </p>
 
 </div>
-
-
-<!-- SEARCH -->
 
 <div class="search-area">
 
@@ -1080,9 +1037,6 @@ oninput="filterChannels()"
 </div>
 
 </div>
-
-
-<!-- BUY -->
 
 <section id="buy">
 
@@ -1132,9 +1086,6 @@ Loading channels...
 
 </section>
 
-
-<!-- FEATURES -->
-
 <section id="about">
 
 <h2 class="section-title">
@@ -1148,59 +1099,40 @@ A marketplace experience built to make YouTube channel discovery easier.
 <div class="features">
 
 <div class="feature">
-
 <div class="feature-icon">🔎</div>
-
 <h3>Easy Discovery</h3>
-
 <p>
 Search and filter available YouTube channels by category and monetization status.
 </p>
-
 </div>
 
 <div class="feature">
-
 <div class="feature-icon">📊</div>
-
 <h3>Listing Information</h3>
-
 <p>
 Review subscribers, category, monetization and pricing information for each listing.
 </p>
-
 </div>
 
 <div class="feature">
-
 <div class="feature-icon">🖼️</div>
-
 <h3>Proof Images</h3>
-
 <p>
 Open available channel screenshots and proof images directly from the listing.
 </p>
-
 </div>
 
 <div class="feature">
-
 <div class="feature-icon">💬</div>
-
 <h3>Direct Contact</h3>
-
 <p>
 Connect with sellers through WhatsApp and discuss the channel directly.
 </p>
-
 </div>
 
 </div>
 
 </section>
-
-
-<!-- STATS -->
 
 <section>
 
@@ -1237,9 +1169,6 @@ A growing marketplace for YouTube channel buyers and sellers.
 </div>
 
 </section>
-
-
-<!-- SELL -->
 
 <section class="sell-section" id="sell">
 
@@ -1300,9 +1229,6 @@ Submit Channel
 
 </section>
 
-
-<!-- ADMIN -->
-
 <section id="adminPanel">
 
 <div class="admin-box">
@@ -1358,11 +1284,11 @@ Manage and publish marketplace listings.
 <label>Proof Image</label>
 <input id="proofImage" type="file" accept="image/*">
 
-<button onclick="publishChannel()">
+<button type="button" onclick="publishChannel()">
 Publish Channel
 </button>
 
-<button onclick="logoutAdmin()" style="background:#dc2626">
+<button type="button" onclick="logoutAdmin()" style="background:#dc2626">
 Logout
 </button>
 
@@ -1377,9 +1303,6 @@ Logout
 </div>
 
 </section>
-
-
-<!-- FOOTER -->
 
 <footer id="support">
 
@@ -1399,7 +1322,6 @@ Logout
 A modern marketplace for discovering and listing YouTube channels. Buyers and sellers can explore listings and connect directly to discuss transactions.
 </p>
 
-
 <div class="footer-grid">
 
 <div class="footer-column">
@@ -1413,7 +1335,6 @@ A modern marketplace for discovering and listing YouTube channels. Buyers and se
 
 </div>
 
-
 <div class="footer-column">
 
 <h4>Marketplace</h4>
@@ -1425,7 +1346,6 @@ A modern marketplace for discovering and listing YouTube channels. Buyers and se
 
 </div>
 
-
 <div class="footer-column">
 
 <h4>Policies</h4>
@@ -1436,7 +1356,6 @@ A modern marketplace for discovering and listing YouTube channels. Buyers and se
 <a href="#">Terms & Conditions</a>
 
 </div>
-
 
 <div class="footer-column">
 
@@ -1451,7 +1370,6 @@ A modern marketplace for discovering and listing YouTube channels. Buyers and se
 
 </div>
 
-
 <div class="contact-icons">
 
 <a
@@ -1463,7 +1381,6 @@ title="Email"
 <span style="font-size:29px">📧</span>
 
 </a>
-
 
 <a
 class="contact-icon"
@@ -1480,7 +1397,6 @@ alt="WhatsApp"
 </a>
 
 </div>
-
 
 <div class="popular-searches">
 
@@ -1499,21 +1415,17 @@ Popular Searches
 
 </div>
 
-
 <p>
 © 2026 YT Channel Market. All rights reserved.
 </p>
 
 </footer>
 
-
-<!-- CHANNEL MODAL -->
-
 <div class="modal" id="channelModal">
 
 <div class="modal-content">
 
-<button class="close" onclick="closeModal()">×</button>
+<button class="close" type="button" onclick="closeModal()">×</button>
 
 <img
 id="modalImage"
@@ -1580,9 +1492,6 @@ Contact on WhatsApp
 
 </div>
 
-
-<!-- IMAGE VIEWER -->
-
 <div
 class="image-viewer"
 id="imageViewer"
@@ -1594,9 +1503,6 @@ onclick="closeViewer()"
 <img id="viewerImage">
 
 </div>
-
-
-<!-- FLOATING WHATSAPP -->
 
 <a
 class="whatsapp-float"
@@ -1610,9 +1516,6 @@ alt="WhatsApp"
 >
 
 </a>
-
-
-<!-- ADMIN LOGIN -->
 
 <div class="modal" id="adminLogin">
 
@@ -1640,6 +1543,7 @@ style="width:100%;padding:14px;margin:10px 0"
 >
 
 <button
+type="button"
 class="submit"
 onclick="loginAdmin()"
 >
@@ -1653,7 +1557,6 @@ Login
 </div>
 
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
@@ -1677,11 +1580,19 @@ let allChannels=[];
 /* MENU */
 
 function openMenu(){
-document.getElementById("sideMenu").classList.add("active");
+
+document
+.getElementById("sideMenu")
+.classList.add("active");
+
 }
 
 function closeMenu(){
-document.getElementById("sideMenu").classList.remove("active");
+
+document
+.getElementById("sideMenu")
+.classList.remove("active");
+
 }
 
 
@@ -1689,7 +1600,13 @@ document.getElementById("sideMenu").classList.remove("active");
 
 async function loadChannels(){
 
-const {data,error}=
+const list =
+document.getElementById("channelList");
+
+list.innerHTML =
+"<p class='no-results'>Loading channels...</p>";
+
+const {data,error} =
 await supabaseClient
 .from("channels")
 .select("*")
@@ -1699,33 +1616,35 @@ if(error){
 
 console.error(error);
 
-document.getElementById("channelList").innerHTML=
+list.innerHTML =
 "<p class='no-results'>Unable to load channels.</p>";
 
 return;
 
 }
 
-allChannels=data||[];
+allChannels =
+data || [];
 
 document.getElementById("totalListings")
-.innerText=allChannels.length;
+.innerText =
+allChannels.length;
 
 renderChannels(allChannels);
 
 }
 
 
-/* RENDER */
+/* RENDER CHANNELS */
 
 function renderChannels(channels){
 
-const list=
+const list =
 document.getElementById("channelList");
 
 if(!channels.length){
 
-list.innerHTML=
+list.innerHTML =
 "<p class='no-results'>No channels found.</p>";
 
 return;
@@ -1736,48 +1655,55 @@ list.innerHTML="";
 
 channels.forEach(channel=>{
 
-const card=
+const card =
 document.createElement("div");
 
-card.className="channel-card";
+card.className =
+"channel-card";
 
-card.onclick=
-()=>openChannel(channel);
+card.addEventListener(
+"click",
+function(){
 
-const image=
-channel.channel_photo||
+openChannel(channel);
+
+}
+);
+
+const image =
+channel.channel_photo ||
 "https://via.placeholder.com/800x500?text=YouTube+Channel";
 
-card.innerHTML=`
+card.innerHTML = `
 
 <img
 class="card-image"
 src="${image}"
-alt="${channel.channel_name||'YouTube Channel'}"
+alt="${channel.channel_name || 'YouTube Channel'}"
 >
 
 <div class="card-body">
 
 <div class="card-title">
-${channel.channel_name||"YouTube Channel"}
+${channel.channel_name || "YouTube Channel"}
 </div>
 
 <div class="card-info">
-👥 ${channel.subscribers||"N/A"} Subscribers
+👥 ${channel.subscribers || "N/A"} Subscribers
 </div>
 
 <div class="card-info">
-📂 ${channel.category||"Other"}
+📂 ${channel.category || "Other"}
 </div>
 
 <div class="card-info">
-💰 ${channel.monetization||"N/A"}
+💰 ${channel.monetization || "N/A"}
 </div>
 
 <div class="card-bottom">
 
 <div class="card-price">
-${channel.price||"Contact for Price"}
+${channel.price || "Contact for Price"}
 </div>
 
 <div class="card-tag">
@@ -1805,45 +1731,61 @@ document.getElementById("channelModal")
 .style.display="block";
 
 document.getElementById("modalTitle")
-.innerText=
-channel.channel_name||"YouTube Channel";
+.innerText =
+channel.channel_name ||
+"YouTube Channel";
 
 document.getElementById("modalSubscribers")
-.innerText=
-channel.subscribers||"N/A";
+.innerText =
+channel.subscribers ||
+"N/A";
 
 document.getElementById("modalCategory")
-.innerText=
-channel.category||"N/A";
+.innerText =
+channel.category ||
+"N/A";
 
 document.getElementById("modalMonetization")
-.innerText=
-channel.monetization||"N/A";
+.innerText =
+channel.monetization ||
+"N/A";
 
 document.getElementById("modalPrice")
-.innerText=
-channel.price||"Contact for Price";
+.innerText =
+channel.price ||
+"Contact for Price";
 
 document.getElementById("modalImage")
-.src=
-channel.channel_photo||"";
+.src =
+channel.channel_photo ||
+"";
 
 document.getElementById("modalProof")
-.src=
-channel.proof_image||"";
+.src =
+channel.proof_image ||
+"";
 
-const message=
+const message =
 "Hello, I am interested in buying the YouTube channel: "
 +
-(channel.channel_name||"");
+(channel.channel_name || "");
 
 document.getElementById("modalYoutube")
-.href=
-channel.channel_link||"#";
+.href =
+channel.channel_link ||
+"#";
+
+const sellerNumber =
+channel.seller_whatsapp ||
+"918263986517";
 
 document.getElementById("modalWhatsapp")
-.href=
-"https://wa.me/918263986517?text="
+.href =
+"https://wa.me/"
++
+sellerNumber.replace(/\D/g,"")
++
+"?text="
 +
 encodeURIComponent(message);
 
@@ -1886,24 +1828,24 @@ document.getElementById("imageViewer")
 
 function filterChannels(){
 
-const search=
+const search =
 document.getElementById("searchInput")
 .value
 .toLowerCase();
 
-const category=
+const category =
 document.getElementById("categoryFilter")
 .value;
 
-const monetization=
+const monetization =
 document.getElementById("monetizationFilter")
 .value;
 
-const filtered=
+const filtered =
 allChannels.filter(channel=>{
 
-const name=
-(channel.channel_name||"")
+const name =
+(channel.channel_name || "")
 .toLowerCase();
 
 return(
@@ -1911,6 +1853,7 @@ return(
 name.includes(search)
 
 &&
+
 (
 category==="all"
 ||
@@ -1918,6 +1861,7 @@ channel.category===category
 )
 
 &&
+
 (
 monetization==="all"
 ||
@@ -1950,8 +1894,12 @@ document.getElementById("categoryFilter")
 document.getElementById("categoryFilter")
 .value=value;
 
-if(value==="all")
-document.getElementById("monetizationFilter").value="all";
+if(value==="all"){
+
+document.getElementById("monetizationFilter")
+.value="all";
+
+}
 
 }
 
@@ -1964,18 +1912,29 @@ filterChannels();
 
 function sortChannels(){
 
-const type=
+const type =
 document.getElementById("sortFilter")
 .value;
 
-let sorted=[...allChannels];
+let sorted =
+[...allChannels];
 
 if(type==="priceLow"){
 
 sorted.sort((a,b)=>
-(parseFloat(String(a.price).replace(/[^\d.]/g,""))||0)
+
+(parseFloat(
+String(a.price || "")
+.replace(/[^\d.]/g,"")
+)||0)
+
 -
-(parseFloat(String(b.price).replace(/[^\d.]/g,""))||0)
+
+(parseFloat(
+String(b.price || "")
+.replace(/[^\d.]/g,"")
+)||0)
+
 );
 
 }
@@ -1983,9 +1942,19 @@ sorted.sort((a,b)=>
 if(type==="priceHigh"){
 
 sorted.sort((a,b)=>
-(parseFloat(String(b.price).replace(/[^\d.]/g,""))||0)
+
+(parseFloat(
+String(b.price || "")
+.replace(/[^\d.]/g,"")
+)||0)
+
 -
-(parseFloat(String(a.price).replace(/[^\d.]/g,""))||0)
+
+(parseFloat(
+String(a.price || "")
+.replace(/[^\d.]/g,"")
+)||0)
+
 );
 
 }
@@ -1999,64 +1968,101 @@ renderChannels(sorted);
 
 function sendSellerRequest(){
 
-const name=
+const name =
 document.getElementById("sellerChannelName")
 .value.trim();
 
-const link=
+const link =
 document.getElementById("sellerChannelLink")
 .value.trim();
 
-const subs=
+const subs =
 document.getElementById("sellerSubscribers")
 .value.trim();
 
-const category=
+const category =
 document.getElementById("sellerCategory")
 .value;
 
-const monetization=
+const monetization =
 document.getElementById("sellerMonetization")
 .value;
 
-const price=
+const price =
 document.getElementById("sellerPrice")
 .value.trim();
 
-const whatsapp=
+const whatsapp =
 document.getElementById("sellerWhatsapp")
 .value.trim();
 
-if(!name||!link||!subs||!price||!whatsapp){
+if(
+!name||
+!link||
+!subs||
+!price||
+!whatsapp
+){
 
-alert("Please fill all required fields.");
+alert(
+"Please fill all required fields."
+);
 
 return;
 
 }
 
-const message=
+const message =
 "📺 NEW YOUTUBE CHANNEL SELL REQUEST\n\n"
 +
-"Channel: "+name+"\n"
+"Channel: "
 +
-"Link: "+link+"\n"
+name
 +
-"Subscribers: "+subs+"\n"
+"\n"
 +
-"Category: "+category+"\n"
+"Link: "
 +
-"Monetization: "+monetization+"\n"
+link
 +
-"Price: "+price+"\n"
+"\n"
 +
-"Seller WhatsApp: "+whatsapp;
+"Subscribers: "
++
+subs
++
+"\n"
++
+"Category: "
++
+category
++
+"\n"
++
+"Monetization: "
++
+monetization
++
+"\n"
++
+"Price: "
++
+price
++
+"\n"
++
+"Seller WhatsApp: "
++
+whatsapp;
 
 window.open(
+
 "https://wa.me/918263986517?text="
 +
 encodeURIComponent(message),
+
 "_blank"
+
 );
 
 }
@@ -2066,7 +2072,11 @@ encodeURIComponent(message),
 
 function openAdminLogin(e){
 
-if(e)e.preventDefault();
+if(e){
+
+e.preventDefault();
+
+}
 
 document.getElementById("adminLogin")
 .style.display="flex";
@@ -2076,15 +2086,27 @@ document.getElementById("adminLogin")
 
 async function loginAdmin(){
 
-const email=
+const email =
 document.getElementById("adminEmail")
-.value;
+.value.trim();
 
-const password=
+const password =
 document.getElementById("adminPassword")
 .value;
 
-const {error}=
+const loginMessage =
+document.getElementById("loginMessage");
+
+if(!email || !password){
+
+loginMessage.innerText =
+"Please enter email and password.";
+
+return;
+
+}
+
+const {error} =
 await supabaseClient.auth
 .signInWithPassword({
 
@@ -2095,8 +2117,7 @@ password
 
 if(error){
 
-document.getElementById("loginMessage")
-.innerText=
+loginMessage.innerText =
 error.message;
 
 return;
@@ -2109,7 +2130,7 @@ document.getElementById("adminLogin")
 document.getElementById("adminPanel")
 .style.display="block";
 
-loadAdminList();
+await loadAdminList();
 
 document.getElementById("adminPanel")
 .scrollIntoView();
@@ -2129,13 +2150,17 @@ document.getElementById("adminPanel")
 }
 
 
-/* UPLOAD */
+/* UPLOAD FILE */
 
 async function uploadFile(bucket,file){
 
-if(!file)return null;
+if(!file){
 
-const fileName=
+return null;
+
+}
+
+const fileName =
 Date.now()
 +
 "_"
@@ -2148,14 +2173,21 @@ Math.random()
 +
 file.name.replace(/\s+/g,"_");
 
-const {error}=
+const {error} =
 await supabaseClient.storage
 .from(bucket)
-.upload(fileName,file);
+.upload(
+fileName,
+file
+);
 
-if(error)throw error;
+if(error){
 
-const {data}=
+throw error;
+
+}
+
+const {data} =
 supabaseClient.storage
 .from(bucket)
 .getPublicUrl(fileName);
@@ -2165,89 +2197,103 @@ return data.publicUrl;
 }
 
 
-/* PUBLISH */
+/* PUBLISH CHANNEL */
 
 async function publishChannel(){
 
-const message=
+const message =
 document.getElementById("adminMessage");
 
 try{
 
-const {data:{user}}=
+const {
+data:{
+user
+}
+} =
 await supabaseClient.auth
 .getUser();
 
 if(!user){
 
-message.innerText=
+message.innerText =
 "Please login first.";
 
 return;
 
 }
 
-const name=
+const name =
 document.getElementById("adminChannelName")
 .value.trim();
 
-const link=
+const link =
 document.getElementById("adminChannelLink")
 .value.trim();
 
-const subscribers=
+const subscribers =
 document.getElementById("adminSubscribers")
 .value.trim();
 
-const category=
+const category =
 document.getElementById("adminCategory")
 .value;
 
-const monetization=
+const monetization =
 document.getElementById("adminMonetization")
 .value;
 
-const price=
+const price =
 document.getElementById("adminPrice")
 .value.trim();
 
-const whatsapp=
+const whatsapp =
 document.getElementById("adminSellerWhatsapp")
 .value.trim();
 
-const photo=
+const photo =
 document.getElementById("channelPhoto")
 .files[0];
 
-const proof=
+const proof =
 document.getElementById("proofImage")
 .files[0];
 
-if(!name||!link||!subscribers||!price||!whatsapp||!photo||!proof){
+if(
+!name||
+!link||
+!subscribers||
+!price||
+!whatsapp||
+!photo||
+!proof
+){
 
-message.innerText=
+message.innerText =
 "Please fill all fields and select both images.";
 
 return;
 
 }
 
-message.innerText=
+message.innerText =
 "Uploading images...";
 
-const photoURL=
+const photoURL =
 await uploadFile(
 "channel-images",
 photo
 );
 
-const proofURL=
+const proofURL =
 await uploadFile(
 "proof-images",
 proof
 );
 
-const {error}=
+const {
+error
+} =
 await supabaseClient
 .from("channels")
 .insert({
@@ -2272,9 +2318,13 @@ proof_image:proofURL
 
 });
 
-if(error)throw error;
+if(error){
 
-message.innerText=
+throw error;
+
+}
+
+message.innerText =
 "✅ Channel published successfully!";
 
 document.getElementById("adminChannelName")
@@ -2308,7 +2358,7 @@ catch(error){
 
 console.error(error);
 
-message.innerText=
+message.innerText =
 "Error: "
 +
 error.message;
@@ -2318,14 +2368,20 @@ error.message;
 }
 
 
-/* ADMIN LIST */
+/* ADMIN LIST - FIXED DELETE BUTTON */
 
 async function loadAdminList(){
 
-const list=
+const list =
 document.getElementById("adminList");
 
-const {data,error}=
+list.innerHTML =
+"<p style='color:#94a3b8;margin-top:20px'>Loading channels...</p>";
+
+const {
+data,
+error
+} =
 await supabaseClient
 .from("channels")
 .select("*")
@@ -2333,8 +2389,13 @@ await supabaseClient
 
 if(error){
 
-list.innerText=
-"Unable to load channels.";
+console.error(
+"Admin list error:",
+error
+);
+
+list.innerHTML =
+"<p style='color:#f87171;margin-top:20px'>Unable to load channels.</p>";
 
 return;
 
@@ -2342,9 +2403,12 @@ return;
 
 list.innerHTML="";
 
-if(!data||!data.length){
+if(
+!data||
+data.length===0
+){
 
-list.innerHTML=
+list.innerHTML =
 "<p style='color:#94a3b8;margin-top:20px'>No published channels.</p>";
 
 return;
@@ -2353,43 +2417,88 @@ return;
 
 data.forEach(channel=>{
 
-const item=
+const item =
 document.createElement("div");
 
-item.className=
+item.className =
 "admin-item";
 
-item.innerHTML=`
 
-<strong>
-${channel.channel_name}
-</strong>
+const title =
+document.createElement("strong");
 
-<br>
+title.innerText =
+channel.channel_name ||
+"YouTube Channel";
+
+
+const info =
+document.createElement("div");
+
+info.style.marginTop =
+"10px";
+
+info.innerHTML = `
 
 Subscribers:
-${channel.subscribers}
+${channel.subscribers || "N/A"}
 
 <br>
 
 Category:
-${channel.category}
+${channel.category || "N/A"}
 
 <br>
 
 Price:
-${channel.price}
-
-<br>
-
-<button
-class="delete"
-onclick="deleteChannel('${channel.id}')"
->
-Delete Channel
-</button>
+${channel.price || "N/A"}
 
 `;
+
+
+/*
+IMPORTANT FIX:
+
+Delete button is created with
+addEventListener instead of inline
+onclick. This prevents click issues.
+*/
+
+const deleteButton =
+document.createElement("button");
+
+deleteButton.type =
+"button";
+
+deleteButton.className =
+"delete";
+
+deleteButton.innerText =
+"Delete Channel";
+
+
+deleteButton.addEventListener(
+"click",
+async function(e){
+
+e.preventDefault();
+
+e.stopPropagation();
+
+await deleteChannel(
+channel.id,
+deleteButton
+);
+
+}
+);
+
+
+item.appendChild(title);
+
+item.appendChild(info);
+
+item.appendChild(deleteButton);
 
 list.appendChild(item);
 
@@ -2400,133 +2509,240 @@ list.appendChild(item);
 
 /* DELETE CHANNEL - FIXED */
 
-async function deleteChannel(id){
+async function deleteChannel(
+channelId,
+deleteButton
+){
 
-    if(!id){
-        alert("Channel ID not found.");
-        return;
-    }
+if(!channelId){
 
-    const confirmed = confirm(
-        "Are you sure you want to permanently delete this channel?"
-    );
+alert(
+"Invalid channel ID."
+);
 
-    if(!confirmed) return;
-
-    try{
-
-        const {
-            data: { user },
-            error: userError
-        } = await supabaseClient.auth.getUser();
-
-        if(userError || !user){
-            alert("Admin login required. Please login again.");
-            return;
-        }
-
-        const { data, error } = await supabaseClient
-            .from("channels")
-            .delete()
-            .eq("id", id)
-            .select();
-
-        if(error){
-
-            console.error("Delete Error:", error);
-
-            alert(
-                "Channel delete failed:\n\n" +
-                error.message
-            );
-
-            return;
-        }
-
-        if(!data || data.length === 0){
-
-            alert(
-                "Channel was not deleted.\n\n" +
-                "Supabase DELETE permission may be blocking this request."
-            );
-
-            return;
-        }
-
-        allChannels = allChannels.filter(
-            channel => String(channel.id) !== String(id)
-        );
-
-        document.getElementById("totalListings").innerText =
-            allChannels.length;
-
-        renderChannels(allChannels);
-
-        await loadAdminList();
-
-        alert("✅ Channel deleted successfully!");
-
-    }
-    catch(error){
-
-        console.error("Delete Exception:", error);
-
-        alert(
-            "Delete error:\n\n" +
-            error.message
-        );
-
-    }
+return;
 
 }
 
+const confirmed =
+confirm(
+"Are you sure you want to delete this channel?"
+);
+
+if(!confirmed){
+
+return;
+
+}
+
+try{
+
+const {
+data:{
+user
+}
+} =
+await supabaseClient.auth
+.getUser();
+
+if(!user){
+
+alert(
+"Admin login required."
+);
+
+return;
+
+}
+
+
+/* DISABLE BUTTON WHILE DELETING */
+
+if(deleteButton){
+
+deleteButton.disabled =
+true;
+
+deleteButton.innerText =
+"Deleting...";
+
+}
+
+
+/* DELETE DATABASE ROW */
+
+const {
+error
+} =
+await supabaseClient
+.from("channels")
+.delete()
+.eq(
+"id",
+channelId
+);
+
+if(error){
+
+console.error(
+"Delete error:",
+error
+);
+
+alert(
+"Delete failed: "
++
+error.message
+);
+
+if(deleteButton){
+
+deleteButton.disabled =
+false;
+
+deleteButton.innerText =
+"Delete Channel";
+
+}
+
+return;
+
+}
+
+
 /*
-Supabase may return no error even when RLS blocks deletion.
-Verify that the row actually disappeared.
+VERIFY THAT THE ROW
+REALLY DISAPPEARED
 */
 
-const {data:checkData,error:checkError}=
+const {
+data:checkData,
+error:checkError
+} =
 await supabaseClient
 .from("channels")
 .select("id")
-.eq("id",id)
-.maybeSingle();
+.eq(
+"id",
+channelId
+);
 
 if(checkError){
 
-console.error(checkError);
+console.error(
+"Delete verification error:",
+checkError
+);
 
 }
 
-if(checkData){
+
+/*
+If row is still visible,
+DELETE RLS policy is blocking it.
+*/
+
+if(
+checkData &&
+checkData.length>0
+){
 
 alert(
-"Delete was not completed. Please check the Supabase DELETE policy for the chann.
+"Channel was not deleted. Please check the DELETE policy in Supabase."
+);
+
+if(deleteButton){
+
+deleteButton.disabled =
+false;
+
+deleteButton.innerText =
+"Delete Channel";
+
+}
+
+return;
+
+}
+
+
+/* SUCCESS */
+
+alert(
+"✅ Channel deleted successfully!"
+);
+
+
+/* REFRESH PUBLIC LIST */
+
+await loadChannels();
+
+
+/* REFRESH ADMIN LIST */
+
+await loadAdminList();
+
+}
+
+catch(error){
+
+console.error(
+"Delete error:",
+error
+);
+
+alert(
+"Delete error: "
++
+error.message
+);
+
+if(deleteButton){
+
+deleteButton.disabled =
+false;
+
+deleteButton.innerText =
+"Delete Channel";
+
+}
+
+}
+
+}
 
 
 /* CLOSE MODALS ON OUTSIDE CLICK */
 
-window.addEventListener("click",function(e){
+window.addEventListener(
+"click",
+function(e){
 
-const channelModal=
+const channelModal =
 document.getElementById("channelModal");
 
-const adminLogin=
+const adminLogin =
 document.getElementById("adminLogin");
 
-if(e.target===channelModal){
+if(
+e.target === channelModal
+){
 
 closeModal();
 
 }
 
-if(e.target===adminLogin){
+if(
+e.target === adminLogin
+){
 
-adminLogin.style.display="none";
+adminLogin.style.display =
+"none";
 
 }
 
-});
+}
+);
 
 
 /* START */
@@ -2537,9 +2753,10 @@ function(){
 
 loadChannels();
 
-});
+}
+);
 
 </script>
 
 </body>
- </html>
+</html>
