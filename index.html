@@ -2398,51 +2398,85 @@ list.appendChild(item);
 }
 
 
-/* DELETE CHANNEL */
+/* DELETE CHANNEL - FIXED */
 
 async function deleteChannel(id){
 
-if(!confirm("Are you sure you want to delete this channel?"))
-return;
+    if(!id){
+        alert("Channel ID not found.");
+        return;
+    }
 
-try{
+    const confirmed = confirm(
+        "Are you sure you want to permanently delete this channel?"
+    );
 
-const {data:{user}}=
-await supabaseClient.auth
-.getUser();
+    if(!confirmed) return;
 
-if(!user){
+    try{
 
-alert("Admin login required.");
+        const {
+            data: { user },
+            error: userError
+        } = await supabaseClient.auth.getUser();
 
-return;
+        if(userError || !user){
+            alert("Admin login required. Please login again.");
+            return;
+        }
 
-}
+        const { data, error } = await supabaseClient
+            .from("channels")
+            .delete()
+            .eq("id", id)
+            .select();
 
-/*
-IMPORTANT:
-The DELETE operation depends on the Supabase RLS DELETE policy
-for the channels table. The policy must allow authenticated admins
-to delete rows.
-*/
+        if(error){
 
-const {error}=
-await supabaseClient
-.from("channels")
-.delete()
-.eq("id",id);
+            console.error("Delete Error:", error);
 
-if(error){
+            alert(
+                "Channel delete failed:\n\n" +
+                error.message
+            );
 
-console.error(error);
+            return;
+        }
 
-alert(
-"Delete failed: "
-+
-error.message
-);
+        if(!data || data.length === 0){
 
-return;
+            alert(
+                "Channel was not deleted.\n\n" +
+                "Supabase DELETE permission may be blocking this request."
+            );
+
+            return;
+        }
+
+        allChannels = allChannels.filter(
+            channel => String(channel.id) !== String(id)
+        );
+
+        document.getElementById("totalListings").innerText =
+            allChannels.length;
+
+        renderChannels(allChannels);
+
+        await loadAdminList();
+
+        alert("✅ Channel deleted successfully!");
+
+    }
+    catch(error){
+
+        console.error("Delete Exception:", error);
+
+        alert(
+            "Delete error:\n\n" +
+            error.message
+        );
+
+    }
 
 }
 
@@ -2467,34 +2501,7 @@ console.error(checkError);
 if(checkData){
 
 alert(
-"Delete was not completed. Please check the Supabase DELETE policy for the channels table."
-);
-
-return;
-
-}
-
-alert("Channel deleted successfully.");
-
-await loadChannels();
-
-await loadAdminList();
-
-}
-
-catch(error){
-
-console.error(error);
-
-alert(
-"Delete error: "
-+
-error.message
-);
-
-}
-
-}
+"Delete was not completed. Please check the Supabase DELETE policy for the chann.
 
 
 /* CLOSE MODALS ON OUTSIDE CLICK */
