@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,301 +7,345 @@
 
 <title>YT Channel Market | Buy & Sell YouTube Channels</title>
 
-<meta name="description" content="YT Channel Market - Buy and sell YouTube channels. Submit your channel for review and find YouTube channels for sale.">
-
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#f4f6f9;
-    color:#111827;
+background:#f4f6f9;
+color:#111827;
 }
 
-/* HEADER */
-
 header{
-    background:#111827;
-    color:white;
-    padding:16px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 15px rgba(0,0,0,.2);
+background:#111827;
+color:white;
+padding:16px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:800;
+font-size:22px;
+font-weight:800;
 }
 
 nav{
-    display:flex;
-    gap:20px;
+display:flex;
+gap:18px;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
-/* HERO */
-
 .hero{
-    background:linear-gradient(135deg,#111827,#1d4ed8);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
+background:linear-gradient(135deg,#111827,#1d4ed8);
+color:white;
+text-align:center;
+padding:75px 20px;
 }
 
 .hero h1{
-    font-size:42px;
-    margin-bottom:15px;
+font-size:42px;
+margin-bottom:15px;
 }
 
 .hero p{
-    font-size:18px;
-    max-width:650px;
-    margin:0 auto 30px;
-    line-height:1.6;
+max-width:700px;
+margin:auto;
+line-height:1.6;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 25px;
-    margin:5px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:bold;
-    border:none;
-    cursor:pointer;
+display:inline-block;
+padding:14px 24px;
+margin:20px 5px 5px;
+border-radius:9px;
+border:none;
+text-decoration:none;
+font-weight:bold;
+cursor:pointer;
 }
 
 .buy-btn{
-    background:#16a34a;
-    color:white;
+background:#16a34a;
+color:white;
 }
 
 .sell-btn{
-    background:#f59e0b;
-    color:white;
+background:#f59e0b;
+color:white;
 }
 
-/* SECTION */
-
 section{
-    padding:55px 5%;
+padding:55px 5%;
 }
 
 .section-title{
-    text-align:center;
-    font-size:30px;
-    margin-bottom:30px;
+text-align:center;
+font-size:30px;
+margin-bottom:30px;
 }
 
-/* SEARCH */
-
 .search-box{
-    max-width:1000px;
-    margin:0 auto 35px;
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:12px;
+max-width:1000px;
+margin:0 auto 35px;
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:12px;
 }
 
 .search-box input,
 .search-box select{
-    width:100%;
-    padding:14px;
-    border:1px solid #d1d5db;
-    border-radius:9px;
-    background:white;
-    font-size:15px;
+width:100%;
+padding:14px;
+border:1px solid #d1d5db;
+border-radius:9px;
+background:white;
 }
 
-/* CHANNEL CARDS */
-
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    max-width:1200px;
-    margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
 }
 
 .card{
-    background:white;
-    border-radius:16px;
-    padding:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
+background:white;
+border-radius:16px;
+padding:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 .channel-image{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:12px;
-    background:#e5e7eb;
-    margin-bottom:15px;
+width:100%;
+height:190px;
+object-fit:cover;
+border-radius:12px;
+background:#e5e7eb;
+margin-bottom:15px;
 }
 
 .card h3{
-    font-size:21px;
-    margin-bottom:12px;
+font-size:21px;
+margin-bottom:12px;
 }
 
 .info{
-    color:#4b5563;
-    margin:8px 0;
+color:#4b5563;
+margin:8px 0;
 }
 
 .price{
-    font-size:23px;
-    font-weight:bold;
-    margin:18px 0;
+font-size:23px;
+font-weight:bold;
+margin:18px 0;
 }
 
 .contact-btn{
-    display:block;
-    background:#25D366;
-    color:white;
-    text-align:center;
-    padding:14px;
-    border-radius:9px;
-    text-decoration:none;
-    font-weight:bold;
+display:block;
+background:#25D366;
+color:white;
+text-align:center;
+padding:14px;
+border-radius:9px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
 }
-
-/* SELL FORM */
 
 .form-container{
-    max-width:700px;
-    margin:auto;
+max-width:700px;
+margin:auto;
 }
 
-.form-box{
-    background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+.form-box,
+.admin-box,
+.login-box{
+background:white;
+padding:30px;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.form-box label{
-    display:block;
-    margin:15px 0 7px;
-    font-weight:bold;
+.form-box label,
+.admin-box label{
+display:block;
+margin:15px 0 7px;
+font-weight:bold;
 }
 
 .form-box input,
 .form-box select,
-.form-box textarea{
-    width:100%;
-    padding:14px;
-    border:1px solid #d1d5db;
-    border-radius:9px;
-    font-size:15px;
+.admin-box input,
+.admin-box select{
+width:100%;
+padding:14px;
+border:1px solid #d1d5db;
+border-radius:9px;
+font-size:15px;
 }
 
 .submit-btn{
-    width:100%;
-    margin-top:22px;
-    padding:15px;
-    border:none;
-    border-radius:9px;
-    background:#2563eb;
-    color:white;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
+width:100%;
+margin-top:22px;
+padding:15px;
+border:none;
+border-radius:9px;
+background:#2563eb;
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer;
 }
 
 .notice{
-    max-width:700px;
-    margin:0 auto 25px;
-    background:#fff7ed;
-    border-left:5px solid #f59e0b;
-    padding:16px;
-    border-radius:8px;
-    line-height:1.6;
+max-width:700px;
+margin:0 auto 25px;
+background:#fff7ed;
+border-left:5px solid #f59e0b;
+padding:16px;
+border-radius:8px;
+line-height:1.6;
 }
 
-/* ABOUT */
-
 .about{
-    background:white;
-    text-align:center;
+background:white;
+text-align:center;
 }
 
 .about p{
-    max-width:800px;
-    margin:auto;
-    color:#4b5563;
-    line-height:1.8;
+max-width:800px;
+margin:auto;
+color:#4b5563;
+line-height:1.8;
 }
 
-/* FOOTER */
-
 footer{
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:35px 15px;
+background:#111827;
+color:white;
+text-align:center;
+padding:35px 15px;
 }
 
 footer p{
-    margin:8px;
+margin:8px;
 }
 
-/* MOBILE */
+/* ADMIN */
+
+#adminPanel{
+display:none;
+background:#eef2ff;
+}
+
+.admin-container{
+max-width:800px;
+margin:auto;
+}
+
+.admin-box button{
+margin-top:18px;
+padding:13px 20px;
+border:none;
+border-radius:8px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.logout{
+background:#dc2626 !important;
+}
+
+#adminLogin{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+z-index:3000;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.login-box{
+width:100%;
+max-width:420px;
+}
+
+.login-box h2{
+margin-bottom:20px;
+}
+
+.login-box input{
+width:100%;
+padding:14px;
+margin:8px 0;
+border:1px solid #d1d5db;
+border-radius:8px;
+}
+
+.login-box button{
+width:100%;
+padding:14px;
+margin-top:10px;
+border:none;
+border-radius:8px;
+background:#2563eb;
+color:white;
+font-weight:bold;
+}
+
+.admin-item{
+background:#f9fafb;
+border:1px solid #ddd;
+padding:15px;
+margin-top:15px;
+border-radius:10px;
+}
+
+.admin-item button{
+background:#dc2626;
+}
 
 @media(max-width:700px){
 
-    header{
-        flex-direction:column;
-        gap:12px;
-    }
+header{
+flex-direction:column;
+gap:12px;
+}
 
-    nav{
-        gap:12px;
-    }
+.hero h1{
+font-size:30px;
+}
 
-    .hero h1{
-        font-size:30px;
-    }
+.search-box{
+grid-template-columns:1fr;
+}
 
-    .search-box{
-        grid-template-columns:1fr;
-    }
+nav{
+gap:12px;
+}
 
-    .section-title{
-        font-size:26px;
-    }
 }
 </style>
 </head>
 
-
 <body>
-
-<!-- HEADER -->
 
 <header>
 
@@ -312,20 +357,19 @@ footer p{
 <a href="#home">Home</a>
 <a href="#buy">Buy</a>
 <a href="#sell">Sell</a>
+<a href="#" onclick="openLogin()">Admin</a>
 </nav>
 
 </header>
 
-
-<!-- HOME -->
 
 <section class="hero" id="home">
 
 <h1>Buy & Sell YouTube Channels</h1>
 
 <p>
-Find YouTube channels available for sale or submit your own channel for review.
-All channel listings are reviewed by the YT Channel Market admin before being published.
+Find YouTube channels available for sale.
+Sellers can submit their channel details to the YT Channel Market admin.
 </p>
 
 <a href="#buy" class="btn buy-btn">
@@ -339,8 +383,6 @@ All channel listings are reviewed by the YT Channel Market admin before being pu
 </section>
 
 
-<!-- BUY CHANNELS -->
-
 <section id="buy">
 
 <h2 class="section-title">
@@ -350,8 +392,8 @@ All channel listings are reviewed by the YT Channel Market admin before being pu
 <div class="search-box">
 
 <input
-type="text"
 id="searchInput"
+type="text"
 placeholder="🔍 Search channel..."
 onkeyup="filterChannels()"
 >
@@ -359,129 +401,37 @@ onkeyup="filterChannels()"
 <select id="categoryFilter" onchange="filterChannels()">
 
 <option value="all">All Categories</option>
-<option value="Gaming">Gaming</option>
-<option value="Entertainment">Entertainment</option>
-<option value="Movie">Movie</option>
-<option value="Magic">Magic</option>
-<option value="Education">Education</option>
-<option value="Other">Other</option>
+<option>Gaming</option>
+<option>Entertainment</option>
+<option>Music</option>
+<option>Education</option>
+<option>News</option>
+<option>Sports</option>
+<option>Comedy</option>
+<option>Other</option>
 
 </select>
 
 <select id="monetizationFilter" onchange="filterChannels()">
 
 <option value="all">All Channels</option>
-<option value="Monetized">Monetized</option>
-<option value="Non-Monetized">Non-Monetized</option>
+<option>Monetized</option>
+<option>Non-Monetized</option>
 
 </select>
 
 </div>
 
-
 <div class="cards" id="channelList">
 
-
-<!-- DEMO CHANNEL 1 -->
-
-<div class="card channel-card"
-data-name="Example Gaming Channel"
-data-category="Gaming"
-data-monetization="Non-Monetized">
-
-<img
-class="channel-image"
-src="https://via.placeholder.com/600x350?text=YouTube+Channel"
-alt="YouTube Channel"
->
-
-<h3>Example Gaming Channel</h3>
-
-<p class="info">
-👥 Subscribers: 2K+
+<p style="text-align:center;">
+Loading channels...
 </p>
-
-<p class="info">
-🎮 Category: Gaming
-</p>
-
-<p class="info">
-💰 Monetization: Non-Monetized
-</p>
-
-<p class="info">
-📸 Proof: Available
-</p>
-
-<p class="price">
-💵 Price: ₹2,000
-</p>
-
-<a
-class="contact-btn"
-href="https://wa.me/918263986517?text=Hello%2C%20I%20want%20to%20buy%20the%20Example%20Gaming%20Channel%20listed%20on%20YT%20Channel%20Market."
-target="_blank">
-
-📱 Contact Admin on WhatsApp
-
-</a>
-
-</div>
-
-
-<!-- DEMO CHANNEL 2 -->
-
-<div class="card channel-card"
-data-name="Example Entertainment Channel"
-data-category="Entertainment"
-data-monetization="Monetized">
-
-<img
-class="channel-image"
-src="https://via.placeholder.com/600x350?text=YouTube+Channel"
-alt="YouTube Channel"
->
-
-<h3>Example Entertainment Channel</h3>
-
-<p class="info">
-👥 Subscribers: 5K+
-</p>
-
-<p class="info">
-🎭 Category: Entertainment
-</p>
-
-<p class="info">
-💰 Monetization: Monetized
-</p>
-
-<p class="info">
-📸 Proof: Available
-</p>
-
-<p class="price">
-💵 Price: ₹8,000
-</p>
-
-<a
-class="contact-btn"
-href="https://wa.me/918263986517?text=Hello%2C%20I%20want%20to%20buy%20the%20Example%20Entertainment%20Channel%20listed%20on%20YT%20Channel%20Market."
-target="_blank">
-
-📱 Contact Admin on WhatsApp
-
-</a>
-
-</div>
-
 
 </div>
 
 </section>
 
-
-<!-- SELL CHANNEL -->
 
 <section id="sell">
 
@@ -493,153 +443,88 @@ target="_blank">
 
 <strong>How it works:</strong><br>
 
-Fill in your channel details below and submit your request.
-Your request will be sent directly to the YT Channel Market admin on WhatsApp.
-After verification, the admin will decide whether to publish your channel on the website.
+Enter your channel details below.
+Your request will be sent to the YT Channel Market admin on WhatsApp.
+After verification, the admin will add your channel to the website.
 
 </div>
-
 
 <div class="form-container">
 
 <div class="form-box">
 
-
-<label>
-Channel Name *
-</label>
+<label>Channel Name *</label>
 
 <input
+id="sellerChannelName"
 type="text"
-id="channelName"
-placeholder="Enter your YouTube channel name"
+placeholder="Enter channel name"
 >
 
-
-<label>
-YouTube Channel Link *
-</label>
+<label>YouTube Channel Link *</label>
 
 <input
+id="sellerChannelLink"
 type="url"
-id="channelLink"
 placeholder="https://youtube.com/@yourchannel"
 >
 
-
-<label>
-Channel Photo / Logo Link
-</label>
+<label>Subscribers *</label>
 
 <input
-type="url"
-id="channelPhoto"
-placeholder="Paste your channel image link"
->
-
-
-<label>
-Subscribers *
-</label>
-
-<input
+id="sellerSubscribers"
 type="text"
-id="subscribers"
-placeholder="Example: 2K, 10K, 24K, 100K"
+placeholder="Example: 10K"
 >
 
+<label>Category *</label>
 
-<label>
-Category *
-</label>
-
-<select id="category">
+<select id="sellerCategory">
 
 <option>Gaming</option>
 <option>Entertainment</option>
-<option>Movie</option>
-<option>Magic</option>
+<option>Music</option>
 <option>Education</option>
+<option>News</option>
+<option>Sports</option>
+<option>Comedy</option>
 <option>Other</option>
 
 </select>
 
+<label>Monetization Status *</label>
 
-<label>
-Monetization Status *
-</label>
-
-<select id="monetization">
+<select id="sellerMonetization">
 
 <option>Monetized</option>
 <option>Non-Monetized</option>
 
 </select>
 
-
-<label>
-Selling Price *
-</label>
+<label>Selling Price *</label>
 
 <input
+id="sellerPrice"
 type="text"
-id="price"
 placeholder="Example: ₹10,000"
 >
 
-
-<label>
-Proof Screenshot Link
-</label>
+<label>Your WhatsApp Number *</label>
 
 <input
-type="url"
-id="proof"
-placeholder="Paste proof screenshot link"
->
-
-
-<label>
-Seller Name *
-</label>
-
-<input
-type="text"
-id="sellerName"
-placeholder="Enter your name"
->
-
-
-<label>
-Seller WhatsApp Number *
-</label>
-
-<input
-type="tel"
 id="sellerWhatsapp"
-placeholder="Enter your WhatsApp number"
+type="tel"
+placeholder="Enter WhatsApp number"
 >
-
-
-<label>
-Additional Details
-</label>
-
-<textarea
-id="details"
-rows="5"
-placeholder="Tell us anything important about your channel..."
-></textarea>
-
 
 <button
 class="submit-btn"
-onclick="sendSellerRequest()">
+onclick="sendSellerRequest()"
+>
 
 📱 Submit Channel for Review
 
 </button>
-
 
 </div>
 
@@ -648,7 +533,105 @@ onclick="sendSellerRequest()">
 </section>
 
 
-<!-- ABOUT -->
+<!-- ADMIN PANEL -->
+
+<section id="adminPanel">
+
+<div class="admin-container">
+
+<div class="admin-box">
+
+<h2>🔐 Admin Panel</h2>
+
+<p>
+Only the website owner can add channels here.
+</p>
+
+<label>Channel Name *</label>
+
+<input id="adminChannelName" type="text">
+
+<label>Channel Link *</label>
+
+<input id="adminChannelLink" type="url">
+
+<label>Subscribers *</label>
+
+<input id="adminSubscribers" type="text">
+
+<label>Category *</label>
+
+<select id="adminCategory">
+
+<option>Gaming</option>
+<option>Entertainment</option>
+<option>Music</option>
+<option>Education</option>
+<option>News</option>
+<option>Sports</option>
+<option>Comedy</option>
+<option>Other</option>
+
+</select>
+
+<label>Monetization *</label>
+
+<select id="adminMonetization">
+
+<option>Monetized</option>
+<option>Non-Monetized</option>
+
+</select>
+
+<label>Selling Price *</label>
+
+<input id="adminPrice" type="text">
+
+<label>Seller WhatsApp *</label>
+
+<input id="adminSellerWhatsapp" type="tel">
+
+<label>Channel Photo *</label>
+
+<input
+id="channelPhoto"
+type="file"
+accept="image/*"
+>
+
+<label>Proof Screenshot *</label>
+
+<input
+id="proofImage"
+type="file"
+accept="image/*"
+>
+
+<button onclick="publishChannel()">
+➕ Publish Channel
+</button>
+
+<button
+class="logout"
+onclick="logoutAdmin()"
+>
+Logout
+</button>
+
+<p id="adminMessage"></p>
+
+<hr style="margin:30px 0">
+
+<h3>Published Channels</h3>
+
+<div id="adminList"></div>
+
+</div>
+
+</div>
+
+</section>
+
 
 <section class="about">
 
@@ -657,207 +640,833 @@ About YT Channel Market
 </h2>
 
 <p>
-
-YT Channel Market is a marketplace-style platform for people interested in buying or selling YouTube channels. Sellers can submit their channel information for review, while buyers can view approved listings and contact the YT Channel Market admin directly through WhatsApp.
-
+YT Channel Market is a marketplace-style platform for people interested in buying and selling YouTube channels. Sellers submit basic information to the admin. The admin verifies the information and publishes approved listings.
 </p>
 
 </section>
 
 
-<!-- FOOTER -->
-
 <footer>
 
-<p>
-📺 <strong>YT Channel Market</strong>
-</p>
+<p>📺 <strong>YT Channel Market</strong></p>
 
-<p>
-Buy & Sell YouTube Channels
-</p>
+<p>Buy & Sell YouTube Channels</p>
 
-<p>
-📱 WhatsApp: 8263986517
-</p>
+<p>📱 WhatsApp: 8263986517</p>
 
-<p>
-© 2026 YT Channel Market. All Rights Reserved.
-</p>
+<p>© 2026 YT Channel Market. All Rights Reserved.</p>
 
 </footer>
 
 
+<!-- LOGIN -->
+
+<div id="adminLogin">
+
+<div class="login-box">
+
+<h2>🔐 Admin Login</h2>
+
+<input
+id="adminEmail"
+type="email"
+placeholder="Admin Email"
+>
+
+<input
+id="adminPassword"
+type="password"
+placeholder="Password"
+>
+
+<button onclick="loginAdmin()">
+Login
+</button>
+
+<button
+onclick="closeLogin()"
+style="background:#6b7280"
+>
+Cancel
+</button>
+
+<p id="loginMessage"></p>
+
+</div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
 
-/* SELL CHANNEL → ADMIN WHATSAPP */
+/* SUPABASE */
 
-function sendSellerRequest(){
+const SUPABASE_URL =
+"https://dqxwtlnidxvvwyrwxawd.supabase.co";
 
-var channelName =
-document.getElementById("channelName").value.trim();
+const SUPABASE_PUBLISHABLE_KEY =
+"sb_publishable_aOwmoccytasLLBRLH8OJ2w_NSXEN-8X";
 
-var channelLink =
-document.getElementById("channelLink").value.trim();
-
-var channelPhoto =
-document.getElementById("channelPhoto").value.trim();
-
-var subscribers =
-document.getElementById("subscribers").value.trim();
-
-var category =
-document.getElementById("category").value;
-
-var monetization =
-document.getElementById("monetization").value;
-
-var price =
-document.getElementById("price").value.trim();
-
-var proof =
-document.getElementById("proof").value.trim();
-
-var sellerName =
-document.getElementById("sellerName").value.trim();
-
-var sellerWhatsapp =
-document.getElementById("sellerWhatsapp").value.trim();
-
-var details =
-document.getElementById("details").value.trim();
+const supabaseClient =
+supabase.createClient(
+SUPABASE_URL,
+SUPABASE_PUBLISHABLE_KEY
+);
 
 
-if(
-channelName === "" ||
-channelLink === "" ||
-subscribers === "" ||
-price === "" ||
-sellerName === "" ||
-sellerWhatsapp === ""
-){
+/* LOGIN */
 
-alert("Please fill all required fields marked with *.");
+function openLogin(){
+
+document.getElementById("adminLogin")
+.style.display="flex";
+
+}
+
+function closeLogin(){
+
+document.getElementById("adminLogin")
+.style.display="none";
+
+}
+
+async function loginAdmin(){
+
+const email =
+document.getElementById("adminEmail")
+.value.trim();
+
+const password =
+document.getElementById("adminPassword")
+.value;
+
+const message =
+document.getElementById("loginMessage");
+
+if(!email || !password){
+
+message.innerText =
+"Please enter email and password.";
+
+return;
+
+}
+
+const {error} =
+await supabaseClient.auth
+.signInWithPassword({
+
+email:email,
+
+password:password
+
+});
+
+if(error){
+
+message.innerText =
+"Login failed: " + error.message;
+
+return;
+
+}
+
+closeLogin();
+
+document.getElementById("adminPanel")
+.style.display="block";
+
+document.getElementById("adminPanel")
+.scrollIntoView();
+
+loadAdminList();
+
+}
+
+
+/* LOGOUT */
+
+async function logoutAdmin(){
+
+await supabaseClient.auth.signOut();
+
+document.getElementById("adminPanel")
+.style.display="none";
+
+alert("Logged out.");
+
+}
+
+
+/* FILE UPLOAD */
+
+async function uploadFile(bucket,file){
+
+if(!file){
+
+return null;
+
+}
+
+const fileName =
+Date.now()
++
+"_"
++
+Math.random()
+.toString(36)
+.substring(2)
++
+"_"
++
+file.name
+.replace(/\s+/g,"_");
+
+
+const {error} =
+await supabaseClient.storage
+.from(bucket)
+.upload(fileName,file);
+
+
+if(error){
+
+throw error;
+
+}
+
+
+const {data} =
+supabaseClient.storage
+.from(bucket)
+.getPublicUrl(fileName);
+
+
+return data.publicUrl;
+
+}
+
+
+/* PUBLISH CHANNEL */
+
+async function publishChannel(){
+
+const message =
+document.getElementById("adminMessage");
+
+try{
+
+const {data:{user}} =
+await supabaseClient.auth
+.getUser();
+
+if(!user){
+
+message.innerText =
+"Please login first.";
 
 return;
 
 }
 
 
-var message =
+const channelName =
+document.getElementById("adminChannelName")
+.value.trim();
 
-"📺 NEW YOUTUBE CHANNEL SELL REQUEST%0A%0A" +
+const channelLink =
+document.getElementById("adminChannelLink")
+.value.trim();
 
-"━━━━━━━━━━━━━━%0A" +
+const subscribers =
+document.getElementById("adminSubscribers")
+.value.trim();
 
-"📌 CHANNEL DETAILS%0A" +
+const category =
+document.getElementById("adminCategory")
+.value;
 
-"━━━━━━━━━━━━━━%0A" +
+const monetization =
+document.getElementById("adminMonetization")
+.value;
 
-"Channel Name: " + channelName + "%0A" +
+const price =
+document.getElementById("adminPrice")
+.value.trim();
 
-"Channel Link: " + channelLink + "%0A" +
+const sellerWhatsapp =
+document.getElementById("adminSellerWhatsapp")
+.value.trim();
 
-"Channel Photo: " + channelPhoto + "%0A" +
+const photo =
+document.getElementById("channelPhoto")
+.files[0];
 
-"Subscribers: " + subscribers + "%0A" +
-
-"Category: " + category + "%0A" +
-
-"Monetization: " + monetization + "%0A" +
-
-"Selling Price: " + price + "%0A" +
-
-"Proof: " + proof + "%0A%0A" +
-
-"━━━━━━━━━━━━━━%0A" +
-
-"👤 SELLER DETAILS%0A" +
-
-"━━━━━━━━━━━━━━%0A" +
-
-"Seller Name: " + sellerName + "%0A" +
-
-"Seller WhatsApp: " + sellerWhatsapp + "%0A%0A" +
-
-"Additional Details: " + details;
+const proof =
+document.getElementById("proofImage")
+.files[0];
 
 
-var whatsappURL =
-"https://wa.me/918263986517?text=" + message;
+if(
+!channelName ||
+!channelLink ||
+!subscribers ||
+!price ||
+!sellerWhatsapp ||
+!photo ||
+!proof
+){
 
+message.innerText =
+"Please fill all fields and select both images.";
 
-window.open(whatsappURL,"_blank");
+return;
 
 }
 
 
-/* SEARCH & FILTER */
-
-function filterChannels(){
-
-var search =
-document.getElementById("searchInput")
-.value
-.toLowerCase();
-
-var category =
-document.getElementById("categoryFilter")
-.value;
-
-var monetization =
-document.getElementById("monetizationFilter")
-.value;
-
-var cards =
-document.querySelectorAll(".channel-card");
+message.innerText =
+"Uploading images...";
 
 
-cards.forEach(function(card){
-
-var name =
-card.getAttribute("data-name")
-.toLowerCase();
-
-var cardCategory =
-card.getAttribute("data-category");
-
-var cardMonetization =
-card.getAttribute("data-monetization");
+const photoURL =
+await uploadFile(
+"channel-images",
+photo
+);
 
 
-var matchesSearch =
-name.includes(search);
-
-var matchesCategory =
-category === "all" ||
-cardCategory === category;
-
-var matchesMonetization =
-monetization === "all" ||
-cardMonetization === monetization;
+const proofURL =
+await uploadFile(
+"proof-images",
+proof
+);
 
 
-if(
-matchesSearch &&
-matchesCategory &&
-matchesMonetization
-){
+message.innerText =
+"Publishing channel...";
 
-card.style.display = "block";
 
-}else{
+const {error} =
+await supabaseClient
+.from("channels")
+.insert({
 
-card.style.display = "none";
+channel_name:channelName,
+
+channel_link:channelLink,
+
+subscribers:subscribers,
+
+category:category,
+
+monetization:monetization,
+
+price:price,
+
+seller_whatsapp:sellerWhatsapp,
+
+channel_photo:photoURL,
+
+proof_image:proofURL
+
+});
+
+
+if(error){
+
+throw error;
+
+}
+
+
+message.innerText =
+"✅ Channel published successfully!";
+
+
+document
+.querySelectorAll("#adminPanel input")
+.forEach(function(input){
+
+if(input.type!=="file"){
+
+input.value="";
 
 }
 
 });
 
+
+document.getElementById("channelPhoto")
+.value="";
+
+document.getElementById("proofImage")
+.value="";
+
+
+loadChannels();
+
+loadAdminList();
+
+
+}catch(error){
+
+message.innerText =
+"Error: " + error.message;
+
 }
+
+}
+
+
+/* LOAD CHANNELS */
+
+async function loadChannels(){
+
+const list =
+document.getElementById("channelList");
+
+
+const {data,error} =
+await supabaseClient
+.from("channels")
+.select("*")
+.order("id",{ascending:false});
+
+
+if(error){
+
+list.innerHTML =
+"<p style='text-align:center'>Unable to load channels.</p>";
+
+console.log(error);
+
+return;
+
+}
+
+
+if(!data || data.length===0){
+
+list.innerHTML =
+"<p style='text-align:center'>No channels available yet.</p>";
+
+return;
+
+}
+
+
+list.innerHTML="";
+
+
+data.forEach(function(channel){
+
+const card =
+document.createElement("div");
+
+card.className =
+"card channel-card";
+
+
+card.dataset.name =
+channel.channel_name || "";
+
+card.dataset.category =
+channel.category || "";
+
+card.dataset.monetization =
+channel.monetization || "";
+
+
+const image =
+channel.channel_photo ||
+"https://via.placeholder.com/600x350?text=YouTube+Channel";
+
+
+const message =
+"Hello, I want to buy the YouTube channel: "
++
+channel.channel_name
++
+" listed on YT Channel Market.";
+
+
+const whatsappURL =
+"https://wa.me/918263986517?text="
++
+encodeURIComponent(message);
+
+
+card.innerHTML=`
+
+<img
+class="channel-image"
+src="${image}"
+alt="${channel.channel_name}"
+>
+
+<h3>${channel.channel_name}</h3>
+
+<p class="info">
+👥 Subscribers: ${channel.subscribers || ""}
+</p>
+
+<p class="info">
+📂 Category: ${channel.category || ""}
+</p>
+
+<p class="info">
+💰 Monetization: ${channel.monetization || ""}
+</p>
+
+<p class="price">
+💵 Price: ${channel.price || ""}
+</p>
+
+<a
+href="${channel.channel_link}"
+target="_blank"
+class="btn buy-btn"
+style="width:100%;text-align:center"
+>
+▶️ View Channel
+</a>
+
+<a
+href="${whatsappURL}"
+target="_blank"
+class="contact-btn"
+>
+📱 Contact Admin on WhatsApp
+</a>
+
+`;
+
+
+list.appendChild(card);
+
+});
+
+
+filterChannels();
+
+}
+
+
+/* ADMIN LIST */
+
+async function loadAdminList(){
+
+const list =
+document.getElementById("adminList");
+
+
+const {data,error} =
+await supabaseClient
+.from("channels")
+.select("*")
+.order("id",{ascending:false});
+
+
+if(error){
+
+list.innerHTML =
+"Unable to load.";
+
+return;
+
+}
+
+
+list.innerHTML="";
+
+
+data.forEach(function(channel){
+
+const item =
+document.createElement("div");
+
+item.className =
+"admin-item";
+
+
+item.innerHTML=`
+
+<strong>
+${channel.channel_name}
+</strong>
+
+<br>
+
+Subscribers:
+${channel.subscribers}
+
+<br>
+
+Price:
+${channel.price}
+
+<br>
+
+<button
+onclick="deleteChannel(${channel.id})"
+>
+🗑️ Delete
+</button>
+
+`;
+
+
+list.appendChild(item);
+
+});
+
+}
+
+
+/* DELETE */
+
+async function deleteChannel(id){
+
+if(!confirm(
+"Delete this channel?"
+)){
+
+return;
+
+}
+
+
+const {error} =
+await supabaseClient
+.from("channels")
+.delete()
+.eq("id",id);
+
+
+if(error){
+
+alert(
+"Delete failed: "
++
+error.message
+);
+
+return;
+
+}
+
+
+loadChannels();
+
+loadAdminList();
+
+}
+
+
+/* SELLER WHATSAPP */
+
+function sendSellerRequest(){
+
+const channelName =
+document.getElementById("sellerChannelName")
+.value.trim();
+
+const channelLink =
+document.getElementById("sellerChannelLink")
+.value.trim();
+
+const subscribers =
+document.getElementById("sellerSubscribers")
+.value.trim();
+
+const category =
+document.getElementById("sellerCategory")
+.value;
+
+const monetization =
+document.getElementById("sellerMonetization")
+.value;
+
+const price =
+document.getElementById("sellerPrice")
+.value.trim();
+
+const whatsapp =
+document.getElementById("sellerWhatsapp")
+.value.trim();
+
+
+if(
+!channelName ||
+!channelLink ||
+!subscribers ||
+!price ||
+!whatsapp
+){
+
+alert(
+"Please fill all required fields."
+);
+
+return;
+
+}
+
+
+const message =
+
+"📺 NEW YOUTUBE CHANNEL SELL REQUEST\n\n"
+
++
+
+"Channel Name: "
++
+channelName
++
+"\n"
+
++
+
+"Channel Link: "
++
+channelLink
++
+"\n"
+
++
+
+"Subscribers: "
++
+subscribers
++
+"\n"
+
++
+
+"Category: "
++
+category
++
+"\n"
+
++
+
+"Monetization: "
++
+monetization
++
+"\n"
+
++
+
+"Selling Price: "
++
+price
++
+"\n"
+
++
+
+"Seller WhatsApp: "
++
+whatsapp;
+
+
+const url =
+
+"https://wa.me/918263986517?text="
+
++
+
+encodeURIComponent(message);
+
+
+window.open(
+url,
+"_blank"
+);
+
+}
+
+
+/* FILTER */
+
+function filterChannels(){
+
+const search =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+const category =
+document.getElementById("categoryFilter")
+.value;
+
+const monetization =
+document.getElementById("monetizationFilter")
+.value;
+
+
+document
+.querySelectorAll(".channel-card")
+.forEach(function(card){
+
+
+const name =
+card.dataset.name
+.toLowerCase();
+
+
+const matchSearch =
+name.includes(search);
+
+
+const matchCategory =
+category==="all"
+||
+card.dataset.category===category;
+
+
+const matchMonetization =
+monetization==="all"
+||
+card.dataset.monetization===monetization;
+
+
+card.style.display =
+
+matchSearch &&
+matchCategory &&
+matchMonetization
+
+?
+
+"block"
+
+:
+
+"none";
+
+
+});
+
+}
+
+
+/* START */
+
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+loadChannels();
+
+});
 
 </script>
 
-
 </body>
-</html>
+    </html>
