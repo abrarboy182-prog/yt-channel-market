@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +6,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Verification -->
 <meta name="google-site-verification" content="aBqxq2Cc1wSciEVMiDshwtD6EdPXwN5Ej7EEoLcn1us">
 
-<!-- SEO -->
 <title>YT Channel Market | Buy & Sell YouTube Channels</title>
 
-<meta name="description" content="YT Channel Market is a marketplace for buying and selling YouTube channels. Browse YouTube channels for sale or submit your channel to sell.">
+<meta name="description" content="YT Channel Market is an online marketplace for buying and selling YouTube channels. Find YouTube channels for sale or submit your channel to sell.">
 
 <meta name="keywords" content="buy YouTube channel, sell YouTube channel, YouTube channels for sale, YouTube channel marketplace, buy and sell YouTube channels, monetized YouTube channels, YouTube channel market, YouTube channel selling, YouTube channel buying">
 
@@ -19,30 +18,25 @@
 
 <link rel="canonical" href="https://abrarboy182-prog.github.io/yt-channel-market/">
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="./yt-channel-market-logo.png">
 
-<!-- Open Graph -->
 <meta property="og:title" content="YT Channel Market | Buy & Sell YouTube Channels">
 <meta property="og:description" content="Buy and sell YouTube channels through YT Channel Market.">
 <meta property="og:image" content="https://abrarboy182-prog.github.io/yt-channel-market/yt-channel-market-logo.png">
 <meta property="og:url" content="https://abrarboy182-prog.github.io/yt-channel-market/">
 <meta property="og:type" content="website">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="YT Channel Market | Buy & Sell YouTube Channels">
+<meta name="twitter:title" content="YT Channel Market">
 <meta name="twitter:description" content="Buy and sell YouTube channels through YT Channel Market.">
 <meta name="twitter:image" content="https://abrarboy182-prog.github.io/yt-channel-market/yt-channel-market-logo.png">
 
-<!-- Website Schema -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "YT Channel Market",
-  "alternateName": "YT Channel Market",
-  "url": "https://abrarboy182-prog.github.io/yt-channel-market/"
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"YT Channel Market",
+ "url":"https://abrarboy182-prog.github.io/yt-channel-market/"
 }
 </script>
 
@@ -63,7 +57,7 @@ color:#111827;
 header{
 background:#111827;
 color:white;
-padding:12px 5%;
+padding:10px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -75,16 +69,16 @@ z-index:1000;
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
-font-size:20px;
+gap:12px;
+font-size:22px;
 font-weight:800;
 }
 
 .logo img{
-width:55px;
-height:55px;
+width:80px;
+height:80px;
 object-fit:contain;
-border-radius:8px;
+display:block;
 }
 
 nav{
@@ -216,6 +210,30 @@ font-weight:bold;
 margin-top:10px;
 }
 
+.view-photo-btn{
+display:block;
+background:#2563eb;
+color:white;
+text-align:center;
+padding:14px;
+border-radius:9px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+}
+
+.view-proof-btn{
+display:block;
+background:#7c3aed;
+color:white;
+text-align:center;
+padding:14px;
+border-radius:9px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+}
+
 .form-container{
 max-width:700px;
 margin:auto;
@@ -293,8 +311,6 @@ padding:35px 15px;
 footer p{
 margin:8px;
 }
-
-/* ADMIN */
 
 #adminPanel{
 display:none;
@@ -376,12 +392,16 @@ background:#dc2626;
 
 header{
 flex-direction:column;
-gap:12px;
+gap:8px;
 }
 
 .logo img{
-width:50px;
-height:50px;
+width:70px;
+height:70px;
+}
+
+.logo{
+font-size:20px;
 }
 
 .hero h1{
@@ -437,7 +457,7 @@ alt="YT Channel Market Logo"
 <h1>Buy & Sell YouTube Channels</h1>
 
 <p>
-YT Channel Market is a marketplace for buying and selling YouTube channels.
+YT Channel Market is an online marketplace for buying and selling YouTube channels.
 Browse available channels for sale or submit your YouTube channel to the admin for review.
 </p>
 
@@ -602,8 +622,6 @@ onclick="sendSellerRequest()"
 </section>
 
 
-<!-- ADMIN PANEL -->
-
 <section id="adminPanel">
 
 <div class="admin-container">
@@ -728,8 +746,6 @@ YT Channel Market is an online marketplace-style platform for people interested 
 </footer>
 
 
-<!-- LOGIN -->
-
 <div id="adminLogin">
 
 <div class="login-box">
@@ -770,8 +786,6 @@ Cancel
 
 <script>
 
-/* SUPABASE */
-
 const SUPABASE_URL =
 "https://dqxwtlnidxvvwyrwxawd.supabase.co";
 
@@ -785,8 +799,6 @@ SUPABASE_PUBLISHABLE_KEY
 );
 
 
-/* LOGIN */
-
 function openLogin(){
 
 document.getElementById("adminLogin")
@@ -794,12 +806,14 @@ document.getElementById("adminLogin")
 
 }
 
+
 function closeLogin(){
 
 document.getElementById("adminLogin")
 .style.display="none";
 
 }
+
 
 async function loginAdmin(){
 
@@ -855,8 +869,6 @@ loadAdminList();
 }
 
 
-/* LOGOUT */
-
 async function logoutAdmin(){
 
 await supabaseClient.auth.signOut();
@@ -868,8 +880,6 @@ alert("Logged out.");
 
 }
 
-
-/* FILE UPLOAD */
 
 async function uploadFile(bucket,file){
 
@@ -917,8 +927,6 @@ return data.publicUrl;
 
 }
 
-
-/* PUBLISH CHANNEL */
 
 async function publishChannel(){
 
@@ -1090,8 +1098,6 @@ message.innerText =
 }
 
 
-/* LOAD CHANNELS */
-
 async function loadChannels(){
 
 const list =
@@ -1154,6 +1160,10 @@ channel.channel_photo ||
 "https://via.placeholder.com/600x350?text=YouTube+Channel";
 
 
+const proof =
+channel.proof_image || "#";
+
+
 const message =
 "Hello, I want to buy the YouTube channel: "
 +
@@ -1200,7 +1210,23 @@ target="_blank"
 class="btn buy-btn"
 style="width:100%;text-align:center"
 >
-▶️ View Channel
+▶️ View YouTube Channel
+</a>
+
+<a
+href="${image}"
+target="_blank"
+class="view-photo-btn"
+>
+🖼️ View Channel Photo
+</a>
+
+<a
+href="${proof}"
+target="_blank"
+class="view-proof-btn"
+>
+📄 View Proof Screenshot
 </a>
 
 <a
@@ -1223,8 +1249,6 @@ filterChannels();
 
 }
 
-
-/* ADMIN LIST */
 
 async function loadAdminList(){
 
@@ -1295,8 +1319,6 @@ list.appendChild(item);
 }
 
 
-/* DELETE */
-
 async function deleteChannel(id){
 
 if(!confirm(
@@ -1334,8 +1356,6 @@ loadAdminList();
 
 }
 
-
-/* SELLER WHATSAPP */
 
 function sendSellerRequest(){
 
@@ -1461,8 +1481,6 @@ url,
 }
 
 
-/* FILTER */
-
 function filterChannels(){
 
 const search =
@@ -1525,8 +1543,6 @@ matchMonetization
 }
 
 
-/* START */
-
 document.addEventListener(
 "DOMContentLoaded",
 function(){
@@ -1538,4 +1554,4 @@ loadChannels();
 </script>
 
 </body>
-    </html>
+</html>
