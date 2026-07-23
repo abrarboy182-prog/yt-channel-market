@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abrarboy182-prog.github.io/yt-channel-market/sitemap.xml
